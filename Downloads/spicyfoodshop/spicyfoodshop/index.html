@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpicyFoodShop - Order pizza, burgers and sandwiches online</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="SpicyFoodShop home">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <span class="brand-name">Spicy<span>FoodShop</span></span>
+            </a>
+            <nav aria-label="Main">
+                <ul class="nav-links"><li><a href="index.html" class="active" aria-current="page">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+            </nav>
+            <a href="#" id="cartLink" class="cart-btn" role="button" aria-label="Open cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h15l-1.6 8.4a2 2 0 0 1-2 1.6H9a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg>
+                <span>Cart</span> <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Pizza, burgers and sandwiches, made fresh when you order.</h1>
+                <p>Pick your dishes, check your cart and get your bill in a minute. No sign-up needed.</p>
+                <a href="menu.html" class="btn-primary">See the menu</a>
+            </div>
+            <div class="hero-plate" aria-hidden="true">
+                <div class="plate-disc"></div>
+                <img src="img/food/p1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Choose a category</h2>
+            <div class="category-grid">
+                <a class="category-card" href="menu.html#pizza">
+                    <img src="img/food/p1.jpg" alt="">
+                    <h3>Pizza</h3>
+                </a>
+                <a class="category-card" href="menu.html#burger">
+                    <img src="img/category/burger.jpg" alt="">
+                    <h3>Burgers</h3>
+                </a>
+                <a class="category-card" href="menu.html#sandwich">
+                    <img src="img/category/sandwich.jpg" alt="">
+                    <h3>Sandwiches</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="container">
+            <div class="section-head">
+                <h2>Featured dishes</h2>
+                <a class="text-link" href="menu.html">View full menu</a>
+            </div>
+            <div class="food-grid" id="featuredFoods"></div>
+        </div>
+    </section>
+    </main>
+    <div class="cart-modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 id="cartTitle">Your cart</h2>
+                <button class="close-btn" id="closeCart" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="cart-body">
+                <div id="cartItems"></div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong>₹<span id="cartTotal">0</span></strong>
+                </div>
+                <button class="btn-primary checkout-btn" id="checkoutBtn">Place order</button>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a class="brand brand-light" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36"><span class="brand-name">Spicy<span>FoodShop</span></span></a>
+                    <p>Delivering delicious food with love since 2026.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact us</h3>
+                    <p>123 Food Street, Yummy City</p>
+                    <p>(123) 456-7890</p>
+                    <p>info@spicyfoodshop.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SpicyFoodShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
